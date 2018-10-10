@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Jumping Spider</string>
+    <string name="jumping_spider">Jumping Spider</string>
+    <string name="rules"><u>RULES</u></string>
+    <string name="options">Options</string>
+</resources>

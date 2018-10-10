@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pop_up_window_RL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pop_up_background_selector"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:gravity="center"
+        android:text="@string/rules"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:fontFamily="serif"/>
+
+    <TextView
+        android:id="@+id/pop_up_window_pumpkin_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="80dp"
+        android:paddingRight="2dp"
+        android:shadowColor="#000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1.5"
+        android:text="Avoid Enemy Objects"
+        android:textColor="@color/Red"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="serif"/>
+
+    <TextView
+        android:id="@+id/pop_up_window_good_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pop_up_window_pumpkin_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:paddingRight="5dp"
+        android:shadowColor="#000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1.5"
+        android:text="Collect Spiders"
+        android:textColor="@color/Blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="serif"/>
+
+    <!-- Enemy Objects -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pop_up_window_pumpkin_text"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/pop_up_window_pumpkin_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/pumpkin_bomb_image"/>
+
+        <ImageView
+            android:id="@+id/pop_up_window_claw_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/pop_up_window_pumpkin_image"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/doc_ock_claw_2"
+            android:layout_alignLeft="@+id/pop_up_window_pumpkin_image"
+            android:layout_marginLeft="32dp"/>
+
+        <ImageView
+            android:id="@+id/pop_up_window_mysterio_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/pop_up_window_claw_image"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/mysterio_blast_image"
+            android:layout_alignLeft="@+id/pop_up_window_claw_image"
+            android:layout_marginLeft="32dp"/>
+
+        <ImageView
+            android:id="@+id/pop_up_window_scorpian_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/pop_up_window_mysterio_image"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/scorpian_blast_image"
+            android:layout_alignLeft="@+id/pop_up_window_mysterio_image"
+            android:layout_marginLeft="32dp"/>
+
+        <ImageView
+            android:id="@+id/pop_up_window_venom_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/pop_up_window_scorpian_image"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/venom_blast_image"
+            android:layout_alignLeft="@+id/pop_up_window_scorpian_image"
+            android:layout_marginLeft="32dp"/>
+
+        <ImageView
+            android:id="@+id/pop_up_window_carnage_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/pop_up_window_venom_image"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/carnage_blast_image"
+            android:layout_alignLeft="@+id/pop_up_window_venom_image"
+            android:layout_marginLeft="32dp"/>
+
+        <ImageView
+            android:id="@+id/pop_up_window_thanos_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignStart="@+id/pop_up_window_carnage_image"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/thanos_gem_red"
+            android:layout_alignLeft="@+id/pop_up_window_carnage_image"
+            android:layout_marginLeft="32dp"/>
+
+    </RelativeLayout>
+
+    <!-- Good Objects-->
+
+    <ImageView
+        android:id="@+id/pop_up_window_good_image"
+        android:layout_below="@+id/pop_up_window_good_text"
+        android:layout_centerHorizontal="true"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/black_spider_collectable"/>
+
+</RelativeLayout>
